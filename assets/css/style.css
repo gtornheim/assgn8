@@ -1,0 +1,104 @@
+
+
+body{ margin:0;
+	font:normal 75% Arial, Helvetica, sans-serif;
+}
+canvas{
+	display: block;
+	vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #FFD19A, #FF8D8D);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles{
+	background: #000022;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	width: 80px;
+	color: #13E8E9;
+	font-size: .8em;
+	text-align: left;
+	text-indent: 4px;
+	line-height: 14px;
+	padding-bottom: 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+.js-count-particles{
+	font-size: 1.1em;
+}
+
+#stats, .count-particles{
+	-webkit-user-select: none;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+#stats{
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+}
+
+.count-particles{
+	border-radius: 0 0 3px 3px;
+}
+
+
+
+
+
+
+html {
+	height: 100%;
+}
+
+
+body {
+	
+	background-size: 100%;
+}
+
+.title {
+	font-family: Futura;
+	text-align: center;
+	color: white;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+#accordian {
+	color: rgba(0,0,0,0);
+}
+
+
+.panel-title {
+	position: relative;
+	text-align: center;
+	font-family: "Monument Extended";
+	font-size: 4em;
+	-webkit-text-stroke: 2px white;
+	-webkit-text-fill-color: rgba(0,0,0,0);
+	margin-top: 40px;
+}
+
+
+.col {
+	text-align: center;
+	font-family: Futura;
+	font-size: 2em;
+	color: white;
+	margin: 20px;
+}
