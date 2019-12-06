@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 	<html>
-		
+
 		<head>
+			<!--I used Bootstrap to make my website structured and responsive-->
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+			<!--I used w3 style to create the cards and modal windows-->
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 			<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 
+
 		<title>PUI Lab</title>
+		<!---->
 
 
-		
 
 
-		
 		</head>
 
 
 		<body>
-		
+			<!--Credit to particle.js for creating the background animation of my website-->
 			<div id="particles-js"></div>
-			
+
 			<h1 class="title">
 				Griffin's Design Toolbox
 			</h1>
 
-			<!--https://www.w3schools.com/bootstrap/bootstrap_collapse.asp-->
+
+			<!--All images are placeholders and will be replaced. I do not own these pictures and take no credit for them. Text to be expounded upon at a later date-->
+			<!--Credit to https://www.w3schools.com/bootstrap/bootstrap_collapse.asp for the accordion feature-->
 			<div class="panel-group" id="accordion">
 
-				
-				
+
+
 				<div class="panel panel-default">
 			    	<div class="panel-heading">
 			    		<h4 class="panel-title">
@@ -37,14 +42,67 @@
 
 			    	<div id="collapse1" class="panel-collapse collapse in">
 			    		<div class="panel-body">
-			    			
+
 			    			<div class="container">
 								<div class="row">
-									<div class="col">Secondary Research</div>
-									<div class="col">Contextual Inquiry</div>
+									<div class="col" onclick="document.getElementById('secondary').style.display='block'">Secondary Research</div>
+									<div class="col" onclick="document.getElementById('contextual').style.display='block'">Contextual Inquiry</div>
 									<div class="w-100"></div>
-									<div class="col">Semi-Structured Interview</div>
-									<div class="col">Think Aloud Protocol</div>
+									<div class="col" onclick="document.getElementById('semi').style.display='block'">Semi-Structured Interview</div>
+									<div class="col" onclick="document.getElementById('tap').style.display='block'">Think Aloud Protocol</div>
+
+									<!--Credit to https://www.w3schools.com/w3css/w3css_modal.asp for the creation of and closing of a modal window-->
+									<!--Credit to https://www.w3schools.com/howto/howto_css_cards.asp for the creation of cards-->
+									<div id="secondary" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+												    <h5>Secondary Research</h5>
+												    <h6>Looking at existing literature and investigating new avenues for information</h6>
+												    <img src="https://media.cntraveler.com/photos/5ab2dd0960926f53f6fec0d2/4:3/w_420,c_limit/George-Peabody-Library-E665TT.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="contextual" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Contextual Inquiry</h4>
+													<h6>Following a master around, learning from, and taking notes about their technqiue.</h6>
+													<img src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/04/star-wars-master-and-apprentice-review.jpg?itok=aFVR6Hzc" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="semi" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Semi-Structured Interview</h4>
+													<h6>Using a script to ask stakholders questions and glean more information about the space.</h6>
+													<img src="https://www.glassdoor.com/blog/app/uploads/sites/2/iStock-890837584-e1526674303169-1024x450.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="tap" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Think Aloud Protocol</h4>
+													<h6>Telling participants to complete tasks on a product and interpreting how they think about the information architecture of a system or see where they have difficulties using the system.</h6>
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CJQXx5N5zVjd4yJpdBmzby5HLqvg3tULwpbyeulGlXtTKUazCQ&s" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
 								</div>
 							</div>
 
@@ -64,21 +122,82 @@
 
 			    	<div id="collapse2" class="panel-collapse collapse">
 			    		<div class="panel-body">
-			    			
+
 			    			<div class="container">
 								<div class="row">
-									<div class="col">Customer Journey Map</div>
-									<div class="col">Stakeholder Map</div>
+									<div class="col" onclick="document.getElementById('cjm').style.display='block'">Customer Journey Map</div>
+									<div class="col" onclick="document.getElementById('stakeholder').style.display='block'">Stakeholder Map</div>
 									<div class="w-100"></div>
-									<div class="col">Service Blueprint</div>
-									<div class="col">Challenges</div>
+									<div class="col" onclick="document.getElementById('service').style.display='block'">Service Blueprint</div>
+									<div class="col" onclick="document.getElementById('challenges').style.display='block'">Challenges</div>
 									<div class="w-100"></div>
-									<div class="col">Tasks</div>
-									<div class="col"></div>
+									<div class="col" onclick="document.getElementById('tasks').style.display='block'">Tasks</div>
+									<div class="col" onclick="document.getElementById('secondary').style.display='block'"></div>
+
+									<div id="cjm" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+												    <h5>Customer Journey Map</h5>
+												    <h6>Listing discrete parts of a customer's actions with corresponding swim lanes such as but not limited to thoughts, feelings, pain points, and opportunities.</h6>
+												    <img src="https://cdn.brightvessel.com/wp-content/uploads/2018/01/BV_CustomerJourneyLayers_CREA95.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="stakeholder" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Stakeholder Map</h4>
+													<h6>Listing the different stakeholders, their roles, and how they exchange value.</h6>
+													<img src="https://i.pinimg.com/originals/34/16/af/3416af5521addb916c0a8525678c1c48.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="service" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Service Blueprint</h4>
+													<h6>Similar to a customer journey map with customer actions divided into discrete steps on the top line, but with lines of interaction and backstage technologies/employee action in the swim lanes.</h6>
+													<img src="https://media.nngroup.com/media/editor/2017/08/22/nng-service-blueprint-example.png" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="challenges" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Challenges</h4>
+													<h6>Discerning what challenges the various parties face in completing their tasks.</h6>
+													<img src="http://img.deusm.com/informationweek/2017/09/1329858/challenges-ladder-shutterstock.png" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="tasks" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Tasks</h4>
+													<h6>What do users want to accomplish and why? How do they go about accomplishing them?</h6>
+													<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFceaqmZeUAnsFZIYd6oqzt1wUED5QldpXs60UyDNPrrobLPsq&s" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div>
 
-			    			
+
 			    		</div>
 			    	</div>
 			    </div>
@@ -95,17 +214,79 @@
 
 			    	<div id="collapse3" class="panel-collapse collapse">
 			    		<div class="panel-body">
-			    			
+
 			    			<div class="container">
 								<div class="row">
-									<div class="col">Share Ideas</div>
-									<div class="col">"Yes and ..." Thinking</div>
+									<div class="col" onclick="document.getElementById('share').style.display='block'">Share Ideas</div>
+									<div class="col" onclick="document.getElementById('yes').style.display='block'">"Yes and ..." Thinking</div>
 									<div class="w-100"></div>
-									<div class="col">Diverge/Converge</div>
-									<div class="col">Reframe</div>
+									<div class="col" onclick="document.getElementById('diverge').style.display='block'">Diverge/Converge</div>
+									<div class="col" onclick="document.getElementById('reframe').style.display='block'">Reframe</div>
 									<div class="w-100"></div>
-									<div class="col">Prioritize</div>
+									<div class="col" onclick="document.getElementById('prioritize').style.display='block'">Prioritize</div>
 									<div class="col"></div>
+
+									<div id="share" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+												    <h5>Share Ideas</h5>
+												    <h6>Get together with teammates and put all ideas on the table.</h6>
+												    <img src="https://penntoday.upenn.edu/sites/default/files/networks%20thumbnail.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="yes" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>"Yes and ..." Thinking</h4>
+													<h6>Borrowed from improvisational comedy, this technique encourages ideas to flow between teammates.</h6>
+													<img src="https://media.npr.org/assets/img/2019/10/11/jazznight_wide-84b0822a7bee05759ccef8b496fcb5fbe4e7bec9-s800-c85.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="diverge" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Diverge</h4>
+													<h6>Create as many diverse ideas as possible with the idea that they'll eventually be winnowed down.</h6>
+													<img src="https://www.testingtime.com/app/uploads/2019/02/double-diamond-process-first-pdf.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="reframe" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Reframe</h4>
+													<h6>Use techniues such as abstraction laddering, reverse assumptions, think outside the box for ways to solve your problem.</h6>
+													<img src="https://www.lucidity.org.uk/wp-content/uploads/2018/11/The-ladder-of-abstraction.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="prioritize" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Prioritize</h4>
+													<h6>Now start converging on a solution based upon feasibility and product-market fit.</h6>
+													<img src="https://miro.medium.com/max/2400/1*q51jue8VU3qvo_F2OW8Cpg.jpeg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+
 								</div>
 							</div>
 
@@ -126,15 +307,65 @@
 
 			    	<div id="collapse4" class="panel-collapse collapse">
 			    		<div class="panel-body">
-			    			
+
 
 			    			<div class="container">
 								<div class="row">
-									<div class="col">Varying Fidelities</div>
-									<div class="col">Parallel Design</div>
+									<div class="col" onclick="document.getElementById('fidelities').style.display='block'">Varying Fidelities</div>
+									<div class="col" onclick="document.getElementById('parallel').style.display='block'">Parallel Design</div>
 									<div class="w-100"></div>
-									<div class="col">Fail Fast</div>
-									<div class="col">Iterate Quickly</div>
+									<div class="col" onclick="document.getElementById('fail').style.display='block'">Fail Fast</div>
+									<div class="col" onclick="document.getElementById('iterate').style.display='block'">Iterate Quickly</div>
+
+									<div id="fidelities" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+												    <h5>Varying Fidelities</h5>
+												    <h6>Start with low-fidelity: the lack of personal investment will mean you're more likely to change it, plus the user is more likely to critique the purpose of the prototype and not details in its fit and finish.</h6>
+												    <img src="https://miro.medium.com/max/1170/1*DsewIjSZe2quBs1OPuQ-VQ.jpeg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="parallel" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Parallel Design</h4>
+													<h6>Design 3 prototypes for the same solution, conduct user tests, narrow your solution down to 2 potential solutions, conduct a second round of user tests, then select a final design. Studies show that parallel is more successful.</h6>
+													<img src="https://i.pinimg.com/originals/1c/5b/a9/1c5ba96c5641630c19ffd6de29d60777.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="fail" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Fail Fast</h4>
+													<h6>By making iterations upon low-fidelity prototypes and testing them in the field, you'll quickly learn what works and what doesn't. Failing early saves both time and money later on.</h6>
+													<img src="https://daily.jstor.org/wp-content/uploads/2017/07/tennis_failure_1050x700.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="iterate" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Iterate Quickly</h4>
+													<h6>By adding small increments of value and testing them, you'll refine your prototype.</h6>
+													<img src="https://i.pinimg.com/originals/fc/35/b9/fc35b9182a48e1d02a2482a80eb12c42.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+
 								</div>
 							</div>
 
@@ -157,11 +388,59 @@
 			    		<div class="panel-body">
 			    			<div class="container">
 								<div class="row">
-									<div class="col">Think-Aloud Protocol</div>
-									<div class="col">A/B Testing</div>
+									<div class="col" onclick="document.getElementById('tap2').style.display='block'">Think-Aloud Protocol</div>
+									<div class="col" onclick="document.getElementById('ab').style.display='block'">A/B Testing</div>
 									<div class="w-100"></div>
-									<div class="col">Role Play</div>
-									<div class="col">Heuristic Evaluation</div>
+									<div class="col" onclick="document.getElementById('role').style.display='block'">Role Play</div>
+									<div class="col" onclick="document.getElementById('heval').style.display='block'">Heuristic Evaluation</div>
+
+									<div id="tap2" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+												    <h5>Think-Aloud Protocol</h5>
+												    <h6>Now conduct a Think Aloud Protocol on your solution. See where users encounter difficulties with you app and make refinements based upon the insights you glean from this.</h6>
+												    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CJQXx5N5zVjd4yJpdBmzby5HLqvg3tULwpbyeulGlXtTKUazCQ&s" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="ab" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>A/B Testing</h4>
+													<h6>Create two different versions of a feature and use data to validate which design leads to a more successful outcome.</h6>
+													<img src="https://miro.medium.com/max/1024/1*ksafv9jQCRbpTkfxyr-dnQ.png" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="role" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Role Playing</h4>
+													<h6>Act as a customer; walk in their shoes and experience how they interact with your product or service.</h6>
+													<img src="https://www.blackgate.com/wp-content/uploads/2017/03/Black-Gate-LARP.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div id="heval" class="w3-modal w3-animate-opacity">
+										<div class="w3-modal-content card" style="width:50%">
+											<div class="w3-container">
+												<div class="container">
+													<h5>Heuristic Evaluation</h4>
+													<h6>Have a UX practitioner go through your product and have them evaluate it against Jakob Nielsen's <a target="_blank" href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics for UI Design.</a></h6>
+													<img src="https://c1.sfdcstatic.com/content/dam/blogs/uk/2017/marketing-team-organisational-design-600.jpg" style="width:100%">
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -172,17 +451,15 @@
 			    </div>
 			</div>
 
-		
+
 		</body>
 
 
 		<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
 		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
-
 
 	</html>
